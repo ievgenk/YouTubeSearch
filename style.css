@@ -1,0 +1,39 @@
+* {
+  font-size: 25px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.nav-buttons {
+  margin-top: 30px;
+}
+
+#yt-icon {
+  height: 80px;
+  width: 120px;
+  margin: 20px;
+}
+
+#output {
+  margin-top: 25px;
+}
+
+#output div {
+  margin: 10px 0;
+}
+
+.thumbnail {
+  transition: transform 1s, box-shadow 1s;
+}
+
+.thumbnail:hover {
+  box-shadow: 2px 6px 5px grey;
+  transform: scale(1.05);
+}
