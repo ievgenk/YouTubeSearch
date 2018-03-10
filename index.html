@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" role="application">
 
 <head>
   <meta charset="UTF-8">
@@ -10,17 +10,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
-<body>
-  <header>
-    <img src="img/yt.png" alt="YouTube logo" id="yt-icon">
+<body role="main">
+  <header role="banner">
+    <a href="index.html">
+      <img src="img/yt.png" alt="YouTube logo" id="yt-icon">
+    </a>
   </header>
-  <div id="input">
-    <input type="text" placeholder="Enter your search query">
-    <input type="button" value="search" id="searchButton">
+  <div id="input" role="search">
+    <input type="text" placeholder="Enter your search query" aria-label="search-inpu">
+    <input type="button" value="search" id="searchButton" aria-label="search-button">
   </div>
 
-  <div id="output">
-
+  <div id="output" role="region" aria-live="assertive" aria-atomic="true" hidden>
   </div>
   <section class="nav-buttons">
     <input type="button" value="Previous" class="tokenClass">

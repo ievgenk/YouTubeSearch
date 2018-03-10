@@ -28,13 +28,13 @@ $(function () {
       pageToken.nextPage = data.nextPageToken;
       pageToken.prevPage = data.prevPageToken;
       console.log(data)
-      let html = ``;
+      let html = (`<h2>Videos displayed: 5</h2>`);
       $.each(data.items, function (index, value) {
         html += `<div class='title'>${value.snippet.title}</div>`;
-        html += `<a href=https://www.youtube.com/watch?v=${value.id.videoId} ><img class="thumbnail" src="${value.snippet.thumbnails.high.url}"></a></div>`
-
+        html += `<a href=https://www.youtube.com/watch?v=${value.id.videoId} ><img class="thumbnail" src="${value.snippet.thumbnails.high.url}" alt="${value.snippet.title}"></a></div>`
       })
-      $('#output').html(html);
+
+      $('#output').html(html).prop('hidden', false);
     })
   }
 
